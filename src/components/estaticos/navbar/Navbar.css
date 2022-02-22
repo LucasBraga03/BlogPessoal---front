@@ -1,0 +1,22 @@
+.um{
+    background: linear-gradient(36deg, #1f1e23 8%, #4a403a 89%)!important;
+    
+}
+
+.back{
+    color: black;
+}
+
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.dois{
+    
+    justify-content: start;
+    display: flex;
+    margin-left: 1220px;
+    
+}
+
