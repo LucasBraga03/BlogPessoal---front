@@ -1,10 +1,25 @@
-import React from 'react';
-import { Typography, Box, Grid, Button, TextField } from '@material-ui/core';
+import React, { useEffect } from 'react';
+import {Typography, Box, Grid, Button} from '@material-ui/core';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import './Home.css';
+import { useHistory } from 'react-router';
+import useLocalStorage from 'react-use-localstorage';
 
 
 function Home() {
+
+    let history = useHistory();
+    const [token, setToken] = useLocalStorage('token');
+    
+    useEffect(() => {
+      if (token == "") {
+          alert("Você precisa estar logado")
+          history.push("/login")
+  
+      }
+  }, [token])
+
     return (
         <Grid container className="back2">
             <Grid item xs={12}>
