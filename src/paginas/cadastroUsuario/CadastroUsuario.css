@@ -1,0 +1,14 @@
+.imglogin{
+    background-image: url('/src/assets/img/peakyblinders.jpg');
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.botaocadastro{
+    background: linear-gradient(36deg, #1f1e23 8%, #4a403a 89%)!important;
+    height: 30px;
+}

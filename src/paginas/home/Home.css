@@ -27,4 +27,12 @@
     font-weight: bold!important;
 }
 
+.botaopostagem{
+    color: white!important;
+    font-weight: bold!important;
+    background: linear-gradient(36deg, #1f1e23 8%, #4a403a 89%)!important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 

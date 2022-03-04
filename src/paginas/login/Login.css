@@ -14,3 +14,8 @@
  .texto{
      text-decoration: none;
  }
+
+ .botaologar{
+    background: linear-gradient(36deg, #1f1e23 8%, #4a403a 89%)!important;
+    height: 30px;
+ }

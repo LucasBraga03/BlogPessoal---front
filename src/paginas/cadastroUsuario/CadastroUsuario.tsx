@@ -5,6 +5,8 @@ import { cadastroUsuario } from '../../services/Service';
 import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
+
 
 function Register(){
 
@@ -50,16 +52,34 @@ function Register(){
         e.preventDefault()
         if(confirmarSenha == user.senha  && user.senha.length >=8){
         cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-        alert('Usuario cadastrado com sucesso!')
+        toast.success('Usuario cadastrado com sucesso', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+            });
         }else{
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                });
         }
     }
 
 
     return(
         <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid item xs={6} className='imagem2'></Grid>
+            <Grid item xs={6} className='imglogin'></Grid>
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
@@ -70,11 +90,11 @@ function Register(){
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth placeholder= 'Insira no mínimo 8 caracteres.' required />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
-                            <Button variant='contained' color='secondary' className='btnCancelar'>
+                            <Button className='botaocadastro' variant='contained' color='secondary'>
                                 Cancelar
                             </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button className='botaocadastro' type='submit' variant='contained' color='primary'>
                                 Cadastrar
                             </Button>
                         </Box>
