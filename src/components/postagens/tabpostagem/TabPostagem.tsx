@@ -14,9 +14,9 @@ function TabPostagem() {
     <>
       <TabContext value={value}>
         
-          <Tabs centered indicatorColor="secondary" onChange={handleChange}>
-            <Tab label="Todas as postagens" value="1"/>
-            <Tab label="Sobre-nós" value="2" />
+          <Tabs  className="sobre"  centered indicatorColor="secondary" onChange={handleChange}>
+            <Tab  label="Todas as postagens" value="1"/>
+            <Tab   label="Sobre-nós" value="2" />
           </Tabs>
         
         <TabPanel value="1" >
@@ -26,7 +26,7 @@ function TabPostagem() {
         </TabPanel>
         <TabPanel value="2">
           <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+          <Typography className="sobre" variant="body1" gutterBottom color="textPrimary" align="center">Em 1 ano e 4 meses que trabalho na SumUp eu aprendi que proatividade e trabalho em equipe são características fundamentais em uma fintech de tecnologia Global e foi esses pontos que mais desenvolvi nesse tempo. Sempre busquei dar o meu melhor, e graças ao meu foco e dedicação, em 6 meses (tempo mínimo para ser promovido) eu fui promovido de Agent I para Agent II. O meu primeiro contato com tecnologia na SumUp foi com chat boot, onde em pouco tempo eu pude perceber o quanto a tecnoligia pode nos ajudar no nosso dia-a-dia</Typography>
         </TabPanel>
       </TabContext>
     </>
